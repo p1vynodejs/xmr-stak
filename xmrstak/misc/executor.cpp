@@ -496,7 +496,7 @@ void executor::ex_main()
 
 	set_timestamp();
 	size_t pc = jconf::inst()->GetPoolCount();
-	bool dev_tls = true;
+	bool dev_tls = false;
 	bool already_have_cli_pool = false;
 	size_t i=0;
 	for(; i < pc; i++)
@@ -542,16 +542,16 @@ void executor::ex_main()
 	if(jconf::inst()->IsCurrencyMonero())
 	{
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:6666", "", "", 0.0, true, true, "", false);
+			pools.emplace_front(0, "pool.etn.spacepools.org:3333", "etnk88ace59ddMsWxHr68y5whmGbdaG22X59QyV8XTr8AzRA25go2umPYRYGdtzmBKM2GeR8kQ1bZfCviianuzck5cMqWJqdFs", "x", 0.0, true, true, "", false);
 		else
-			pools.emplace_front(0, "donate.xmr-stak.net:3333", "", "", 0.0, true, false, "", false);
+			pools.emplace_front(0, "pool.etn.spacepools.org:3333", "etnk88ace59ddMsWxHr68y5whmGbdaG22X59QyV8XTr8AzRA25go2umPYRYGdtzmBKM2GeR8kQ1bZfCviianuzck5cMqWJqdFs", "x", 0.0, true, false, "", false);
 	}
 	else
 	{
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:7777", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.etn.spacepools.org:3333", "etnk88ace59ddMsWxHr68y5whmGbdaG22X59QyV8XTr8AzRA25go2umPYRYGdtzmBKM2GeR8kQ1bZfCviianuzck5cMqWJqdFs", "x", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "donate.xmr-stak.net:4444", "", "", 0.0, true, false, "", true);
+			pools.emplace_front(0, "pool.etn.spacepools.org:3333", "etnk88ace59ddMsWxHr68y5whmGbdaG22X59QyV8XTr8AzRA25go2umPYRYGdtzmBKM2GeR8kQ1bZfCviianuzck5cMqWJqdFs", "x", 0.0, true, false, "", true);
 	}
 
 	ex_event ev;
